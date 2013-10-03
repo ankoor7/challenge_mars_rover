@@ -3,7 +3,7 @@
 
 class RoversControl
 
-  attr_accessor :instructions, :plateau
+  attr_accessor :instructions, :plateau, :rovers
 
   # Parse the options hash
   # @instructions is the current instruction set being followed
@@ -16,5 +16,21 @@ class RoversControl
     coords = instructions[0]
     @plateau = Plateau.new(coords)
   end
+
+  def extract_rover_instructions
+
+  end
+
+  def prepare_rovers
+    @rovers = Array.new
+    rover_instructions = Array.new(@instructions)
+    rover_instructions.shift
+    # remove the coords for the plateau and iterate over the instructions for rovers
+    rover_instructions.each_slice(2) do |instruction_block|
+      position, route = instruction_block
+      @rovers << Rover.new(position: position, instructions: route)
+    end
+  end
+
 
 end

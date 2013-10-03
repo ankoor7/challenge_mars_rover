@@ -18,10 +18,13 @@ describe RoversControl do
   end
 
   it "creates a set of rovers" do
-
+    @control.prepare_rovers
+    expect(@control.rovers.length).to eq ((@instructions.length - 1) /2)
+    expect(@control.rovers[0]).to be_an_instance_of Rover
   end
 
-  it "sends instructions to each rover in turn" do
+  it "starts each rover in turn" do
+    pending
   end
 
 end
