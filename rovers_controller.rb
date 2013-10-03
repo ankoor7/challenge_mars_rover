@@ -22,7 +22,6 @@ class RoversControl
     @rovers = Array.new
     rover_instructions = Array.new(@instructions)
     rover_instructions.shift
-    # remove the coords for the plateau and iterate over the instructions for rovers
     rover_instructions.each_slice(2) do |instruction_block|
       position, route = instruction_block
       @rovers << Rover.new(position: position, instructions: route)

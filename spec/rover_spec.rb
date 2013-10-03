@@ -2,11 +2,18 @@ require 'spec_helper'
 
 describe Rover do
   before :each do
-
+    @instructions = "RMMLLMM"
+    @position = "1 0 N"
+    @rover = Rover.new(position: @position, instructions: @instructions)
   end
 
-  it "accepts an array of instructions" do
-    pending
+  it "accepts an string of instructions" do
+    @rover.instructions.should match @instructions
+  end
+
+  it "accepts an initial position" do
+    @rover.initial_position.should == [1,0]
+    @rover.direction.should eq :N
   end
 
   it "engages the engine to move" do
