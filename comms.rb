@@ -1,9 +1,12 @@
 # This class has functions for communication between "NASA" and any controllers
 
-
+# = Communication Error
+# This is raised if invalid commands are recieved from HQ
 class CommsError < StandardError
 end
 
+# = Communications
+# Communication class to handle data input and output
 class Comms
 # Parse instruction file and return an array of single instruction blocks
   def parse(file)
