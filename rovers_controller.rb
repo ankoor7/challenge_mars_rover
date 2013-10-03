@@ -17,10 +17,7 @@ class RoversControl
     @plateau = Plateau.new(coords)
   end
 
-  def extract_rover_instructions
-
-  end
-
+  # Prepare a new set of Rovers with initial positions and routes to follow. Instructions are taken from the current set of instructions, @instructions
   def prepare_rovers
     @rovers = Array.new
     rover_instructions = Array.new(@instructions)
