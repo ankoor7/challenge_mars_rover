@@ -12,16 +12,13 @@ describe RoversControl do
     expect(@control.instructions).to eq @instructions
   end
 
-  it "reads the first instruction as Plateau coordinates" do
-
-  end
-
   it "makes a Plateau object with the correct x_max and y_max coordinates" do
     plateau = @control.map_plateau
     expect(plateau).to be_an_instance_of Plateau
   end
 
   it "creates a set of rovers" do
+
   end
 
   it "sends instructions to each rover in turn" do

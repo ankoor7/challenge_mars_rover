@@ -5,5 +5,7 @@ class Plateau
     @x_max = coords[0]
     @y_max = coords[1]
   end
+
+
 end
 
