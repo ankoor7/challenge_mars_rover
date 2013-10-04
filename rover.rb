@@ -17,6 +17,15 @@ class Rover
     @log = []
   end
 
+  def execute_instructions
+    @instructions.split.each do |instruction|
+      case instruction
+      when :a
+        true
+      end
+    end
+  end
+
   def to_s
     "#{position[0]} #{position[1]} #{@direction}"
   end

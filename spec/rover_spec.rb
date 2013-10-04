@@ -12,6 +12,11 @@ describe Rover do
     @rover.instructions.should match @instructions
   end
 
+  it "executes the current instruction set one at a time" do
+    @rover.execute_instructions
+    @rover.to_s.should eq "1 0 W"
+  end
+
   it "accepts an initial position" do
     @rover.position.should == [1,0]
     @rover.direction.should eq :N
@@ -61,7 +66,5 @@ describe Rover do
   it "prints a useful status report" do
     @rover.to_s.should eq "1 0 N"
   end
-
-
 
 end
