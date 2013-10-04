@@ -27,8 +27,13 @@ describe Rover do
     @rover.position.should eq [1,0]
   end
 
-  it "checks if movements are valid" do
-    pending
+  it "does not move to invalid coordinates" do
+    @instructions = "MM"
+    @position = "5 5 N"
+    @map = Plateau.new([5, 5])
+    @rover = Rover.new(position: @position, instructions: @instructions, map: @map)
+    @rover.engage_engine
+    @rover.position.should eq [5,5]
   end
 
   it "steers left and right" do

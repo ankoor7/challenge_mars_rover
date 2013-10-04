@@ -1,6 +1,6 @@
 class Rover
 
-  attr_accessor :instructions, :direction, :position
+  attr_accessor :instructions, :direction, :position, :log
 
   @@move = {  :E => [1,0],
                         :W => [-1,0],
@@ -14,11 +14,14 @@ class Rover
     @direction =  pos_data[2].to_sym
     @instructions = params.fetch(:instructions)
     @map = params.fetch(:map)
+    @log = []
   end
 
   def engage_engine
     if @map.contains(new_coord)
       @position = new_coord
+    else
+      @log.push "#{new_coord} is out of bounds. please check instructions"
     end
   end
 
