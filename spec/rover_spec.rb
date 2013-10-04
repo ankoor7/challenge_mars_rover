@@ -12,11 +12,19 @@ describe Rover do
   end
 
   it "accepts an initial position" do
-    @rover.initial_position.should == [1,0]
+    @rover.position.should == [1,0]
     @rover.direction.should eq :N
   end
 
   it "engages the engine to move" do
+    pending
+  end
+
+  it "calculates the coordinates for each movement" do
+    @rover.new_coord.should eq [1,1]
+  end
+
+  it "checks if movements are valid" do
     pending
   end
 
@@ -29,10 +37,6 @@ describe Rover do
   end
 
   it "records its position while moving" do
-    pending
-  end
-
-  it "checks if movements are valid" do
     pending
   end
 

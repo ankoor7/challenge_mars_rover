@@ -1,18 +1,29 @@
 class Rover
 
-  attr_accessor :instructions, :direction, :initial_position
+  attr_accessor :instructions, :direction, :position
 
-  @@move = {  east: [1,0],
-                        west: [-1,0],
-                        north: [0,1],
-                        south: [0,-1]
+  @@move = {  :E => [1,0],
+                        :W => [-1,0],
+                        :N => [0,1],
+                        :S => [0,-1]
                      }
 
   def initialize(params = {})
-    position = params.fetch(:position).split
-    @initial_position = [position[0].to_i, position[1].to_i]
-    @direction =  position[2].to_sym
+    pos_data = params.fetch(:position).split
+    @position = [pos_data[0].to_i, pos_data[1].to_i]
+    @direction =  pos_data[2].to_sym
     @instructions = params.fetch(:instructions)
+  end
+
+  def engage_engine
+    if new_coord.is_valid_position?
+      @position = new_coord
+    end
+  end
+
+  def new_coord
+    [@position, @@move[@direction]].transpose.map { |coord|
+      coord.reduce(:+) }
   end
 
   def turn_left
@@ -41,7 +52,7 @@ class Rover
     end
   end
 
-  def valid_move?
+  def is_valid_position?
     true
   end
 
