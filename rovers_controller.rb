@@ -24,7 +24,7 @@ class RoversControl
     rover_instructions.shift
     rover_instructions.each_slice(2) do |instruction_block|
       position, route = instruction_block
-      @rovers << Rover.new(position: position, instructions: route)
+      @rovers << Rover.new(position: position, instructions: route, map: @plateau)
     end
   end
 

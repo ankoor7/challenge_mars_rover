@@ -4,7 +4,8 @@ describe Rover do
   before :each do
     @instructions = "RMMLLMM"
     @position = "1 0 N"
-    @rover = Rover.new(position: @position, instructions: @instructions)
+    @map = Plateau.new([5, 5])
+    @rover = Rover.new(position: @position, instructions: @instructions, map: @map)
   end
 
   it "accepts an string of instructions" do
@@ -17,11 +18,13 @@ describe Rover do
   end
 
   it "engages the engine to move" do
-    pending
+    @rover.engage_engine
+    @rover.position.should eq [1,1]
   end
 
   it "calculates the coordinates for each movement" do
     @rover.new_coord.should eq [1,1]
+    @rover.position.should eq [1,0]
   end
 
   it "checks if movements are valid" do

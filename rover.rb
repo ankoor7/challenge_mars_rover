@@ -13,10 +13,11 @@ class Rover
     @position = [pos_data[0].to_i, pos_data[1].to_i]
     @direction =  pos_data[2].to_sym
     @instructions = params.fetch(:instructions)
+    @map = params.fetch(:map)
   end
 
   def engage_engine
-    if new_coord.is_valid_position?
+    if @map.contains(new_coord)
       @position = new_coord
     end
   end
@@ -50,10 +51,6 @@ class Rover
     when :W
       @direction = :N
     end
-  end
-
-  def is_valid_position?
-    true
   end
 
 end
