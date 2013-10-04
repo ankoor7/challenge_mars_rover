@@ -43,13 +43,10 @@ describe Rover do
 
   it "steers left" do
     @rover.turn_left
-    p @rover
     @rover.direction.should eq :W
     @rover.turn_left
-    p @rover
     @rover.direction.should eq :S
     @rover.turn_left
-    p @rover
     @rover.direction.should eq :E
     @rover.turn_left
     @rover.direction.should eq :N
