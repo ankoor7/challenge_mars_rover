@@ -17,6 +17,10 @@ class Rover
     @log = []
   end
 
+  def to_s
+    "#{position[0]} #{position[1]} #{@direction}"
+  end
+
   def engage_engine
     if @map.contains(new_coord)
       @position = new_coord

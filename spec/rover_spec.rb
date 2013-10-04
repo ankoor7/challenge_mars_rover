@@ -58,16 +58,8 @@ describe Rover do
     @rover.direction.should eq :N
   end
 
-  it "records its direction while steering" do
-    pending
-  end
-
-  it "records its position while moving" do
-    pending
-  end
-
   it "prints a useful status report" do
-    pending
+    @rover.to_s.should eq "1 0 N"
   end
 
 
