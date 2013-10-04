@@ -36,8 +36,26 @@ describe Rover do
     @rover.position.should eq [5,5]
   end
 
-  it "steers left and right" do
-    pending
+  it "steers left" do
+    @rover.turn_left
+    @rover.direction.should eq :W
+    @rover.turn_left
+    @rover.direction.should eq :S
+    @rover.turn_left
+    @rover.direction.should eq :E
+    @rover.turn_left
+    @rover.direction.should eq :N
+  end
+
+  it "steers right" do
+    @rover.turn_right
+    @rover.direction.should eq :E
+    @rover.turn_right
+    @rover.direction.should eq :S
+    @rover.turn_right
+    @rover.direction.should eq :W
+    @rover.turn_right
+    @rover.direction.should eq :N
   end
 
   it "records its direction while steering" do
