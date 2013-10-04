@@ -11,6 +11,8 @@ class Plateau
     @y_max = coords[1]
   end
 
-
+  def contains(coodinate)
+    coodinate[0] <= x_max && coodinate[0] >= 0 && coodinate[1] <= y_max && coodinate[1] >= 0
+  end
 end
 
