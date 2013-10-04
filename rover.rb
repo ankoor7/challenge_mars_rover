@@ -20,10 +20,14 @@ class Rover
   end
 
   def execute_instructions
-    @instructions.split.each do |instruction|
+    @instructions.split('').each do |instruction|
       case instruction
-      when :a
-        true
+      when "L"
+        turn_left
+      when "R"
+        turn_right
+      when "M"
+        engage_engine
       end
     end
   end
