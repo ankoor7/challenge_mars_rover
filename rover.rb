@@ -8,6 +8,8 @@ class Rover
                         :S => [0,-1]
                      }
 
+  @@compass = [:N,:E,:S,:W]
+
   def initialize(params = {})
     pos_data = params.fetch(:position).split
     @position = [pos_data[0].to_i, pos_data[1].to_i]
@@ -44,28 +46,20 @@ class Rover
   end
 
   def turn_left
-    case @direction
-    when :N
-      @direction = :W
-    when :E
-      @direction = :N
-    when :S
-      @direction = :E
-    when :W
-      @direction = :S
+    if @@compass.index(@direction) == 0
+      @direction = @@compass[-1]
+    else
+      current_index = @@compass.index(@direction)
+      @direction = @@compass[current_index - 1]
     end
   end
 
   def turn_right
-    case @direction
-    when :N
-      @direction = :E
-    when :E
-      @direction = :S
-    when :S
-      @direction = :W
-    when :W
-      @direction = :N
+    if @@compass.index(@direction) == @@compass.length - 1
+      @direction = @@compass[0]
+    else
+      current_index = @@compass.index(@direction)
+      @direction = @@compass[current_index + 1]
     end
   end
 
