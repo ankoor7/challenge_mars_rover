@@ -7,8 +7,8 @@ class Plateau
 
   # Assign the supplied coordinates to x and y variables
   def initialize(coords)
-    @x_max = coords[0]
-    @y_max = coords[1]
+    @x_max = coords[0].to_i
+    @y_max = coords[1].to_i
   end
 
   def contains(coodinate)
