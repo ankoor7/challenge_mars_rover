@@ -22,12 +22,9 @@ class Rover
   def execute_instructions
     @instructions.split('').each do |instruction|
       case instruction
-      when "L"
-        turn_left
-      when "R"
-        turn_right
-      when "M"
-        engage_engine
+      when "L" then turn_left
+      when "R" then turn_right
+      when "M" then engage_engine
       end
     end
   end
@@ -45,8 +42,7 @@ class Rover
   end
 
   def new_coord
-    [@position, @@move[@direction]].transpose.map { |coord|
-      coord.reduce(:+) }
+    [@position, @@move[@direction]].transpose.map { |coord|  coord.reduce(:+) }
   end
 
   def turn_left
