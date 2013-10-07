@@ -43,8 +43,9 @@ class Rover
   def engage_engine
     if @map.contains(new_coord)
       @position = new_coord
+      @log.push "#{@position}"
     else
-      @log.push "#{new_coord} is out of bounds. please check instructions"
+      @log.push "#{@position} #{@direction} - #{new_coord} is out of bounds. please check instructions"
     end
   end
 
