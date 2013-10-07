@@ -1,15 +1,15 @@
-Mon, 07 Oct 2013 16:09:03 +0100
+Mon, 07 Oct 2013 16:51:12 +0100
 ./answers.txt	Thu, 03 Oct 2013 11:42:43 +0100
 ./comms.rb	Mon, 07 Oct 2013 16:01:24 +0100
-./doc/created.rid	Mon, 07 Oct 2013 16:09:03 +0100
-./input.txt	Thu, 03 Oct 2013 23:10:57 +0100
-./main.rb	Mon, 07 Oct 2013 16:07:51 +0100
-./plateau.rb	Mon, 07 Oct 2013 15:59:22 +0100
-./rover.rb	Mon, 07 Oct 2013 16:07:31 +0100
+./doc/created.rid	Mon, 07 Oct 2013 16:51:12 +0100
+./input.txt	Mon, 07 Oct 2013 16:16:57 +0100
+./main.rb	Mon, 07 Oct 2013 16:30:05 +0100
+./plateau.rb	Mon, 07 Oct 2013 16:35:54 +0100
+./rover.rb	Mon, 07 Oct 2013 16:36:22 +0100
 ./rover_as_aasm.rb	Thu, 03 Oct 2013 17:52:13 +0100
-./rovers_controller.rb	Mon, 07 Oct 2013 15:57:14 +0100
+./rovers_controller.rb	Mon, 07 Oct 2013 16:50:50 +0100
 ./spec/comms_spec.rb	Mon, 07 Oct 2013 15:49:36 +0100
-./spec/plateau_spec.rb	Fri, 04 Oct 2013 10:44:17 +0100
+./spec/plateau_spec.rb	Mon, 07 Oct 2013 16:27:45 +0100
 ./spec/rover_spec.rb	Fri, 04 Oct 2013 23:34:37 +0100
-./spec/rovers_controller_spec.rb	Mon, 07 Oct 2013 13:14:29 +0100
+./spec/rovers_controller_spec.rb	Mon, 07 Oct 2013 16:45:51 +0100
 ./spec/spec_helper.rb	Fri, 04 Oct 2013 10:21:56 +0100

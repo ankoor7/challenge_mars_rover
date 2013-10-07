@@ -296,7 +296,7 @@ followed</p>
           <div class="method-source-code" id="map_plateau-source">
             <pre><span class="ruby-comment"># File rovers_controller.rb, line 15</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">map_plateau</span>
-  <span class="ruby-identifier">coords</span> = <span class="ruby-identifier">instructions</span>[<span class="ruby-value">0</span>]
+  <span class="ruby-identifier">coords</span> = <span class="ruby-identifier">instructions</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">split</span>
   <span class="ruby-ivar">@plateau</span> = <span class="ruby-constant">Plateau</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">coords</span>)
 <span class="ruby-keyword">end</span></pre>
           </div><!-- map_plateau-source -->
@@ -374,8 +374,7 @@ Instructions are taken from the current set of instructions, @instructions</p>
   <span class="ruby-ivar">@rovers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">rover</span><span class="ruby-operator">|</span>
     <span class="ruby-identifier">report</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{rover}&quot;</span>
   <span class="ruby-keyword">end</span>
-  <span class="ruby-identifier">title</span> = <span class="ruby-string">&quot;Current positions of all rovers&quot;</span>
-  <span class="ruby-keyword">return</span> [<span class="ruby-identifier">title</span>, <span class="ruby-identifier">report</span>]
+  <span class="ruby-keyword">return</span> [<span class="ruby-identifier">report</span>]
 <span class="ruby-keyword">end</span></pre>
           </div><!-- status_report-source -->
           
