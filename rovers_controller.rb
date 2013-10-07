@@ -41,8 +41,7 @@ class RoversControl
     @rovers.each do |rover|
       report << "#{rover}"
     end
-    title = "Current positions of all rovers"
-    return [title, report]
+    return [report]
   end
 
 end
