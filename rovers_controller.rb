@@ -13,7 +13,7 @@ class RoversControl
 
   # Maps a new plateau with the coordinates supplied in @instructions. Create a @plateau object accessible from this controller
   def map_plateau
-    coords = instructions[0]
+    coords = instructions[0].split
     @plateau = Plateau.new(coords)
   end
 

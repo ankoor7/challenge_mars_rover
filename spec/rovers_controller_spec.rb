@@ -14,8 +14,12 @@ describe RoversControl do
     expect(@control.instructions).to eq @instructions
   end
 
-  it "makes a Plateau object with the correct x_max and y_max coordinates" do
+  it "makes a Plateau object" do
     expect(@control.plateau).to be_an_instance_of Plateau
+  end
+
+  it "makes a Plateau object with the correct x_max and y_max coordinates" do
+    expect([@control.plateau.x_max, @control.plateau.y_max]).to eq @instructions[0].split.map { |e| e.to_i }
   end
 
   it "creates a set of rovers" do
