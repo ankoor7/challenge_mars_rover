@@ -1,3 +1,5 @@
+# Batch file to run the challenge and print the answer to STDOUT
+
 require_relative 'comms'
 require_relative 'rovers_controller'
 require_relative 'plateau'

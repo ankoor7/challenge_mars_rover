@@ -20,6 +20,7 @@ class Comms
     puts report
   end
 
+  # Function to check the incoming instruction set. Allowed characters are: M, L, R, N, S, E, W, spaces and digits. Returns a CommsError if invalid characters are present
   private
   def check_rover_instruction_set
     @instruction_set.each do |line|

@@ -28,12 +28,14 @@ class RoversControl
     end
   end
 
+  # Deploy all rovers, in turn. Each one will follow it's latest instructions
   def deploy_rovers
     @rovers.each do |rover|
       rover.execute_instructions
     end
   end
 
+  # Create a status report containing the current positions of each rover
   def status_report
     report = Array.new
     @rovers.each do |rover|
