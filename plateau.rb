@@ -5,7 +5,7 @@ class Plateau
   attr_reader :x_max, :y_max
 
 
-  # Assign the supplied coordinates to x and y variables. The function takes the raw string as given in the instruction file, e.g. "5 5"
+  # Assign the supplied coordinates to x and y variables. The function takes the coordinates as an Array, e.g. [x,y]
   def initialize(coords)
     @x_max = coords[0].to_i
     @y_max = coords[1].to_i
