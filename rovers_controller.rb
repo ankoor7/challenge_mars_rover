@@ -28,5 +28,10 @@ class RoversControl
     end
   end
 
+  def deploy_rovers
+    @rovers.each do |rover|
+      rover.execute_instructions
+    end
+  end
 
 end
