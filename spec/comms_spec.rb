@@ -14,8 +14,12 @@ describe Comms do
   end
 
   describe "#send" do
-    it "sends the status of each rover to the STDOUT" do
-      pending
+    it "puts the status report to STDOUT" do
+      data = ["line 1", "line 2", "line 3"]
+      title = "Sample Title"
+      sample_report = [title, data]
+      STDOUT.should_receive(:puts).with(sample_report)
+      @comm.send(sample_report)
     end
   end
 

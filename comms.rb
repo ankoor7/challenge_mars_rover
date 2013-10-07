@@ -16,9 +16,11 @@ class Comms
   end
 
   # function to send status reports and output to the NASA. (Or the screen in this case)
-  def send
+  def send(report)
+    puts report
   end
 
+  private
   def check_rover_instruction_set
     @instruction_set.each do |line|
       line.split('').each do |element|
@@ -30,4 +32,5 @@ class Comms
       end
     end
   end
+
 end
