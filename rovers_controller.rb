@@ -34,4 +34,13 @@ class RoversControl
     end
   end
 
+  def status_report
+    report = Array.new
+    @rovers.each do |rover|
+      report << "#{rover}"
+    end
+    title = "Current positions of all rovers"
+    return [title, report]
+  end
+
 end

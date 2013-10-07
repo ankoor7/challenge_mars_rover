@@ -29,4 +29,11 @@ describe RoversControl do
     @control.deploy_rovers
   end
 
+  it "calls the statius of each rover" do
+    @control.rovers[0].should_receive(:to_s).once
+    @control.rovers[-1].should_receive(:to_s).once
+    @control.status_report
+  end
+
+
 end
