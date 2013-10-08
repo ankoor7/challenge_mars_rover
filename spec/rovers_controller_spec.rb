@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe RoversControl do
   before :each do
-    file = "/Users/ankoor/Code/tests/mars_rover/input.txt"
+    file = file = File.expand_path("input.txt")
     comms = Comms.new
     @instructions = comms.parse(file)
     @control = RoversControl.new(instructions: @instructions)

@@ -7,7 +7,7 @@ describe Comms do
 
   describe "#parse" do
     it "puts the instructions into an array" do
-      file = "/Users/ankoor/Code/tests/mars_rover/input.txt"
+      file = file = File.expand_path("input.txt")
       instructions = @comm.parse(file)
       expect(instructions).to be_an_instance_of Array
     end

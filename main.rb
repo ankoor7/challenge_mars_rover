@@ -6,7 +6,7 @@ require_relative 'plateau'
 require_relative 'rover'
 require 'pry'
 
-file = "/Users/ankoor/Code/tests/mars_rover/input.txt"
+file = File.expand_path("input.txt")
 
 comms = Comms.new
 instructions = comms.parse(file)
